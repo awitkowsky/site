@@ -1,32 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>JSDoc: Source: script.js</title>
-
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
-</head>
-
-<body>
-
-<div id="main">
-
-    <h1 class="page-title">Source: script.js</h1>
-
-    
-
-
-
-    
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>/**
+/**
  * Gra w węża z dwoma trybami trudności (Easy i Hard).
  * 
  * W trybie Easy wąż rośnie, zbierając jedzenie, a gra kończy się przy kolizji ze ścianą lub przeciwnikiem.
@@ -126,7 +98,7 @@ function startGameEasy() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         // KOLIZJA ZE ŚCIANĄ
-        if (myGamePiece.x &lt; 0 || myGamePiece.x + myGamePiece.width > canvas.width || myGamePiece.y &lt; 0 || myGamePiece.y + myGamePiece.height > canvas.height) {
+        if (myGamePiece.x < 0 || myGamePiece.x + myGamePiece.width > canvas.width || myGamePiece.y < 0 || myGamePiece.y + myGamePiece.height > canvas.height) {
             koniecGry();
         } else {
             // RUCH
@@ -139,7 +111,7 @@ function startGameEasy() {
             }
 
             // Rysowanie ciała węża
-            for (let i = 0; i &lt; snakeBody.length; i++) {
+            for (let i = 0; i < snakeBody.length; i++) {
                 ctx.fillStyle = myGamePiece.color;
                 ctx.fillRect(snakeBody[i].x, snakeBody[i].y, snakeBody[i].width, snakeBody[i].height);
             }
@@ -150,24 +122,24 @@ function startGameEasy() {
 
             // Rysowanie punktów niebezpiecznych
             ctx.fillStyle = "red";
-            for (let i = 0; i &lt; dangerPoints.length; i++) {
+            for (let i = 0; i < dangerPoints.length; i++) {
                 ctx.fillRect(dangerPoints[i].x, dangerPoints[i].y, dangerPoints[i].width, dangerPoints[i].height);
             }
 
             // JEDZENIE ... JEDZENIA
-            if (myGamePiece.x &lt; food.x + food.width &amp;&amp;
-                myGamePiece.x + myGamePiece.width > food.x &amp;&amp;
-                myGamePiece.y &lt; food.y + food.height &amp;&amp;
+            if (myGamePiece.x < food.x + food.width &&
+                myGamePiece.x + myGamePiece.width > food.x &&
+                myGamePiece.y < food.y + food.height &&
                 myGamePiece.y + myGamePiece.height > food.y) {
                 increaseScore();
                 food = createFood();
             }
 
             // KOLIZJA Z WROGIEM
-            for (let i = 0; i &lt; dangerPoints.length; i++) {
-                if (myGamePiece.x &lt; dangerPoints[i].x + dangerPoints[i].width &amp;&amp;
-                    myGamePiece.x + myGamePiece.width > dangerPoints[i].x &amp;&amp;
-                    myGamePiece.y &lt; dangerPoints[i].y + dangerPoints[i].height &amp;&amp;
+            for (let i = 0; i < dangerPoints.length; i++) {
+                if (myGamePiece.x < dangerPoints[i].x + dangerPoints[i].width &&
+                    myGamePiece.x + myGamePiece.width > dangerPoints[i].x &&
+                    myGamePiece.y < dangerPoints[i].y + dangerPoints[i].height &&
                     myGamePiece.y + myGamePiece.height > dangerPoints[i].y) {
                     koniecGry();
                 }
@@ -195,7 +167,7 @@ function startGameEasy() {
 
     // TWORZENIE WROGA (w losowym miejscu)
     function createDangerPoints() {
-        for (let i = 0; i &lt; dangerCount; i++) {
+        for (let i = 0; i < dangerCount; i++) {
             let validPosition = false;
             let dangerX, dangerY;
 
@@ -204,17 +176,17 @@ function startGameEasy() {
                 dangerX = Math.floor(Math.random() * (500 / 40)) * 40;
                 dangerY = Math.floor(Math.random() * (500 / 40)) * 40;
 
-                const isOnPlayer = dangerX &lt; myGamePiece.x + myGamePiece.width &amp;&amp;
-                                dangerX + 20 > myGamePiece.x &amp;&amp;
-                                dangerY &lt; myGamePiece.y + myGamePiece.height &amp;&amp;
+                const isOnPlayer = dangerX < myGamePiece.x + myGamePiece.width &&
+                                dangerX + 20 > myGamePiece.x &&
+                                dangerY < myGamePiece.y + myGamePiece.height &&
                                 dangerY + 20 > myGamePiece.y;
 
-                const isOnFood = dangerX &lt; food.x + food.width &amp;&amp;
-                                dangerX + 20 > food.x &amp;&amp;
-                                dangerY &lt; food.y + food.height &amp;&amp;
+                const isOnFood = dangerX < food.x + food.width &&
+                                dangerX + 20 > food.x &&
+                                dangerY < food.y + food.height &&
                                 dangerY + 20 > food.y;
 
-                if (!isOnPlayer &amp;&amp; !isOnFood) {
+                if (!isOnPlayer && !isOnFood) {
                     validPosition = true;
                 }
             }
@@ -245,7 +217,7 @@ function startGameHard() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         // KOLIZJA ZE ŚCIANĄ
-        if (myGamePiece.x &lt; 0 || myGamePiece.x + myGamePiece.width > canvas.width || myGamePiece.y &lt; 0 || myGamePiece.y + myGamePiece.height > canvas.height) {
+        if (myGamePiece.x < 0 || myGamePiece.x + myGamePiece.width > canvas.width || myGamePiece.y < 0 || myGamePiece.y + myGamePiece.height > canvas.height) {
             koniecGry();
         } else {
             // RUCH
@@ -258,7 +230,7 @@ function startGameHard() {
             }
 
             // Rysowanie ciała węża
-            for (let i = 0; i &lt; snakeBody.length; i++) {
+            for (let i = 0; i < snakeBody.length; i++) {
                 ctx.fillStyle = myGamePiece.color;
                 ctx.fillRect(snakeBody[i].x, snakeBody[i].y, snakeBody[i].width, snakeBody[i].height);
             }
@@ -269,24 +241,24 @@ function startGameHard() {
 
             // Rysowanie punktów niebezpiecznych
             ctx.fillStyle = "red";
-            for (let i = 0; i &lt; dangerPoints.length; i++) {
+            for (let i = 0; i < dangerPoints.length; i++) {
                 ctx.fillRect(dangerPoints[i].x, dangerPoints[i].y, dangerPoints[i].width, dangerPoints[i].height);
             }
 
             // JEDZENIE ... JEDZENIA
-            if (myGamePiece.x &lt; food.x + food.width &amp;&amp;
-                myGamePiece.x + myGamePiece.width > food.x &amp;&amp;
-                myGamePiece.y &lt; food.y + food.height &amp;&amp;
+            if (myGamePiece.x < food.x + food.width &&
+                myGamePiece.x + myGamePiece.width > food.x &&
+                myGamePiece.y < food.y + food.height &&
                 myGamePiece.y + myGamePiece.height > food.y) {
                 increaseScore();
                 food = createFood();
             }
 
             // KOLIZJA Z WROGIEM
-            for (let i = 0; i &lt; dangerPoints.length; i++) {
-                if (myGamePiece.x &lt; dangerPoints[i].x + dangerPoints[i].width &amp;&amp;
-                    myGamePiece.x + myGamePiece.width > dangerPoints[i].x &amp;&amp;
-                    myGamePiece.y &lt; dangerPoints[i].y + dangerPoints[i].height &amp;&amp;
+            for (let i = 0; i < dangerPoints.length; i++) {
+                if (myGamePiece.x < dangerPoints[i].x + dangerPoints[i].width &&
+                    myGamePiece.x + myGamePiece.width > dangerPoints[i].x &&
+                    myGamePiece.y < dangerPoints[i].y + dangerPoints[i].height &&
                     myGamePiece.y + myGamePiece.height > dangerPoints[i].y) {
                     koniecGry();
                 }
@@ -322,7 +294,7 @@ function startGameHard() {
 
     // TWORZENIE WROGA (w losowym miejscu)
     function createDangerPoints() {
-        for (let i = 0; i &lt; dangerCount; i++) {
+        for (let i = 0; i < dangerCount; i++) {
             let validPosition = false;
             let dangerX, dangerY;
 
@@ -331,17 +303,17 @@ function startGameHard() {
                 dangerX = Math.floor(Math.random() * (500 / 40)) * 40;
                 dangerY = Math.floor(Math.random() * (500 / 40)) * 40;
 
-                const isOnPlayer = dangerX &lt; myGamePiece.x + myGamePiece.width &amp;&amp;
-                                dangerX + 20 > myGamePiece.x &amp;&amp;
-                                dangerY &lt; myGamePiece.y + myGamePiece.height &amp;&amp;
+                const isOnPlayer = dangerX < myGamePiece.x + myGamePiece.width &&
+                                dangerX + 20 > myGamePiece.x &&
+                                dangerY < myGamePiece.y + myGamePiece.height &&
                                 dangerY + 20 > myGamePiece.y;
 
-                const isOnFood = dangerX &lt; food.x + food.width &amp;&amp;
-                                dangerX + 20 > food.x &amp;&amp;
-                                dangerY &lt; food.y + food.height &amp;&amp;
+                const isOnFood = dangerX < food.x + food.width &&
+                                dangerX + 20 > food.x &&
+                                dangerY < food.y + food.height &&
                                 dangerY + 20 > food.y;
 
-                if (!isOnPlayer &amp;&amp; !isOnFood) {
+                if (!isOnPlayer && !isOnFood) {
                     validPosition = true;
                 }
             }
@@ -351,7 +323,7 @@ function startGameHard() {
 
     // ZMIANA POZYCJI OPONENTA
     function changeDangerPointsPosition() {
-        for (let i = 0; i &lt; dangerPoints.length; i++) {
+        for (let i = 0; i < dangerPoints.length; i++) {
             dangerPoints[i].x = Math.floor(Math.random() * (500 / 40)) * 40; 
             dangerPoints[i].y = Math.floor(Math.random() * (500 / 40)) * 40; 
         }
@@ -361,27 +333,5 @@ function startGameHard() {
 //GAME OVER
 function koniecGry() {
     clearInterval(gameInterval);
-    alert("Koniec gry! Masz " + score + (score === 1 ? " gruzikopunkt" : score &lt; 5 ? " gruzikopunkty" : " gruzikopunktów"));
-}</code></pre>
-        </article>
-    </section>
-
-
-
-
-</div>
-
-<nav>
-    <h2><a href="../index.html">Home</a></h2><h3><a href="folder-waz/index.html" target=”_blank”>LIVE</a></h3>
-</nav>
-
-<br class="clear">
-
-<footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Sat Feb 08 2025 23:33:39 GMT+0100 (czas środkowoeuropejski standardowy)
-</footer>
-
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
-</body>
-</html>
+    alert("Koniec gry! Masz " + score + (score === 1 ? " gruzikopunkt" : score < 5 ? " gruzikopunkty" : " gruzikopunktów"));
+}
