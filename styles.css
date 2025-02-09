@@ -12,6 +12,37 @@ header {
     text-align: center;
 }
 
+header h1{
+    font-size: 4.3vh;
+}
+
+main{
+    filter:blur(4px);
+}
+
+#WIP {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 3vh 3vw;
+    font-size: 3vh;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 1vh;
+    z-index: 1000;
+    animation: pulse 4s ease-in-out infinite;
+}
+
+/* Płynna animacja pulsowania */
+@keyframes pulse {
+    0% { opacity: 0.8; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+    100% { opacity: 0.8; transform: translate(-50%, -50%) scale(1); }}
+
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -28,14 +59,14 @@ nav ul li a {
 }
 
 section {
-    padding: 50px;
+    padding: 40px;
     text-align: center;
 }
 
 .project {
     background: white;
     padding: 20px;
-    margin: 20px auto;
+    margin:  auto;
     width: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -47,18 +78,19 @@ form {
     margin: auto;
 }
 
-input, textarea {
+input, textarea, button {
     margin: 10px 0;
     padding: 10px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 button {
     background: #333;
     color: white;
-    padding: 10px;
     border: none;
     cursor: pointer;
+    font-size: 16px;
 }
 
 button:hover {

@@ -56,6 +56,4 @@ function tabliczka(PoczątkowaX = 1, KońcowaX = 10, PoczątkowaY = 1, KońcowaY
         footerRow += "<td></td>";
         footerRow += "</tr>";
         tabela.innerHTML += footerRow;
-
-    console.log("Sam jesteś dzban ;*");
 }

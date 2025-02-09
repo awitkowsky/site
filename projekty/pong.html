@@ -55,18 +55,12 @@ let przyspieszenie = 0.005;     // Stopniowe przyspieszanie piłki
 let szerokoscPaletek = 150;   // Szerokość paletek gracza i przeciwnika
 let rozmiarPilki = 8;         // Rozmiar piłki
 
-/**
- * Konwertuje kąt w stopniach na radiany.
- * @param {number} kat - Kąt w stopniach.
- * @returns {number} - Kąt w radianach.
- */
+
 function katToRad(kat) {
     return kat * (Math.PI / 180);
 }
 
-/**
- * Rysuje elementy gry na canvasie, w tym piłkę, paletki i tło.
- */
+// Rysowanie elementów gry
 function draw() {
     let canvas = document.getElementById('canvas');
     if (canvas.getContext) {
@@ -121,9 +115,7 @@ function draw() {
     }
 }
 
-/**
- * Inicjalizuje nową grę w Pong, ustawiając początkowe wartości.
- */
+// Rozpoczęcie gry
 function pong() {
     i = 500;
     j = 400;
@@ -141,11 +133,7 @@ function pong() {
     }, 1337);
 }
 
-/**
- * Aktualizuje pozycję paletki gracza na podstawie ruchu myszy.
- * @param {MouseEvent} e - Obiekt zdarzenia myszy.
- * @returns {{pozX: number, pozY: number}} - Nowa pozycja myszy.
- */
+// Śledzenie pozycji myszy
 function pozycjaMyszki(e) {
     if (!e) e = window.event;
     let pozX = e.pageX - (screen.width - 1000) / 2;
@@ -156,8 +144,6 @@ function pozycjaMyszki(e) {
 
     return { pozX, pozY };
 }
-
-// Nasłuchiwanie ruchów myszy
 document.onmousemove = pozycjaMyszki;
 </code></pre>
         </article>
