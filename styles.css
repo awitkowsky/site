@@ -24,7 +24,6 @@ header {
     align-items: center;
 
     box-shadow: 5px 0 10px rgba(0, 0, 0, 0.2);
-
 }
 
 main {
@@ -37,15 +36,14 @@ main {
 }
 
 
-#logo{
-    width: 11vw;
-    height: 11vw;
-    border-radius:50%;
-    border: 1px solid #696969;
-    background: linear-gradient(30deg, #696969, #797979);
-    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.6);
+#logo {
+    background: transparent;
+    display: block;
     margin-bottom: 12vh;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
 }
+
 
 #nawigacja ul {
     list-style: none;
@@ -54,7 +52,7 @@ main {
 }
 
 #nawigacja ul li {
-    margin: 1vh 0; /* Odstęp między elementami */
+    margin: 1vh 0;
 }
 
 #nawigacja ul li a {
@@ -69,13 +67,18 @@ main {
 }
 
 #nawigacja ul li a:hover {
-    background: rgba(255, 255, 255, 0.8); /* Efekt hover */
+    background: rgba(255, 255, 255, 0.8);
     transform: scale(1.1);
 }
 
 
 #linki{
-    margin-top: 19vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 5vh;
 }
 
 #linki ul {
@@ -85,7 +88,14 @@ main {
 }
 
 #linki ul li {
-    margin: 0; /* Odstęp między elementami */
+    margin: 0;
+    padding: 0 2vw;
+}
+
+#linki ul li p{
+    font-weight: bold;
+    margin: 2vh;
+    font-size: 2vh;
 }
 
 #linki ul li a {
@@ -98,35 +108,58 @@ main {
 }
 
 #linki ul li a:hover {
-    background: rgba(255, 255, 255, 0.8); /* Efekt hover */
+    background: rgba(255, 255, 255, 0.8);
     transform: scale(1.1);
 }
 
 
 section{
-    height: 100vh;
     box-sizing: border-box;
-    margin: 2vh 0;
+    margin: 0;
+    font-size: 2.5vh;
     display: flex;
-    flex-direction: column; /* Ustawienie elementów jeden pod drugim */
-    align-items: center; /* Wyśrodkowanie w poziomie */
-    justify-content: center; /* Wyśrodkowanie w pionie */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-#main-section{
-    border: 2px dashed red;
+#sekcja-main{
+    height: 100vh;
+    border: 0px dashed red;
 }
 
-#projects{
-    border: 2px dashed blue;
+#sekcja-projekty{
+    height: 95vh;
+    position: relative;
+    border: 0px dashed blue;
+    background-color: #eeeeee;
 }
 
-#about{
-    border: 2px dashed green;
+#sekcja-projekty::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12vh;
+    background: url('data:image/svg+xml,<svg viewBox="0 0 1440 150" xmlns="http://www.w3.org/2000/svg"><path fill="%23f5f5f5" d="M0,120 Q180,30 360,90 T720,120 T1080,60 T1440,120 L1440,150 L0,150Z"></path></svg>') no-repeat center/cover;
+    transform: rotate(180deg);
 }
 
+#sekcja-projekty::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 12vh;
+    background: url('data:image/svg+xml,<svg viewBox="0 0 1440 150" xmlns="http://www.w3.org/2000/svg"><path fill="%23f5f5f5" d="M0,120 Q180,30 360,90 T720,120 T1080,60 T1440,120 L1440,150 L0,150Z"></path></svg>') no-repeat center/cover;
+}
 
-
+#sekcja-o-mnie{
+    border: 0px dashed green;
+    height: 80vh;
+}
 
 
 
