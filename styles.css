@@ -259,7 +259,9 @@ p{
 
 
 
-
+::-webkit-scrollbar {
+    width: 0px;
+}
 
 main{
     filter:blur(0.5vh);
