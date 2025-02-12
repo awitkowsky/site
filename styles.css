@@ -215,11 +215,10 @@ h2{
 }
 
 main{
-    filter:blur(0px);
+    filter:blur(4px);
 }
 
 #WIP {
-    display: none;
     position: absolute;
     top: 50%;
     left: 59%;
