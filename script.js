@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-const toggleButton = document.getElementById('darkModeToggle');
+const toggleButton = document.getElementById('przelacz_motyw');
 
 // Sprawdzenie, czy użytkownik wcześniej wybrał motyw
 if (localStorage.getItem('dark-mode') === 'enabled') {

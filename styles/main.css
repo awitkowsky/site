@@ -347,21 +347,29 @@
     width: 100vw;
   }
   header {
-    width: 20vw;
-    height: 35vh;
+    width: 17vw;
+    height: 32vh;
     padding-top: 4vh;
+    border-radius: 5vw;
     position: absolute;
-    right: 0;
+    right: 2vw;
     top: 50%;
-    transform: translatey(-50%);
+    transform: translateY(-50%);
     z-index: 10;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0.5vw 0 2vw var(--color-shadow);
+    box-shadow: 0.2vw 0 4vw var(--color-shadow);
+    background-color: rgba(30, 30, 30, 0.95);
   }
   header #logo_tel {
     display: none;
+  }
+  header #przelacz_motyw {
+    position: absolute;
+    bottom: 3vh;
+    width: 80%;
+    height: 5vh;
   }
   main {
     width: 100vw;
@@ -397,6 +405,9 @@
     border-radius: 1vh;
     transition: all 0.3s ease-in-out;
   }
+  #nawigacja ul li a img {
+    filter: grayscale(1) invert(1);
+  }
   #nawigacja ul li a .text {
     display: none;
   }
@@ -426,7 +437,7 @@
     justify-content: center;
   }
   #sekcja-main {
-    height: 80vh;
+    height: 60vh;
   }
   #sekcja-main p {
     font-style: italic;
