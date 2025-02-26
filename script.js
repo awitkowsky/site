@@ -25,3 +25,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     sections.forEach(section => observer.observe(section));
 });
+
+
+const toggleButton = document.getElementById('darkModeToggle');
+
+// Sprawdzenie, czy użytkownik wcześniej wybrał motyw
+if (localStorage.getItem('dark-mode') === 'enabled') {
+  document.body.classList.add('dark-mode');
+  toggleButton.textContent = '☀️ Light Mode';
+}
+
+// Obsługa kliknięcia przycisku
+toggleButton.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  
+  if (document.body.classList.contains('dark-mode')) {
+    localStorage.setItem('dark-mode', 'enabled');
+    toggleButton.textContent = '☀️ Light Mode';
+  } else {
+    localStorage.setItem('dark-mode', 'disabled');
+    toggleButton.textContent = '🌙 Dark Mode';
+  }
+});
