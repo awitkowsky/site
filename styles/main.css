@@ -348,7 +348,7 @@
   }
   header {
     width: 20vw;
-    height: 40vh;
+    height: 35vh;
     padding-top: 4vh;
     position: absolute;
     right: 0;
@@ -370,11 +370,11 @@
     box-sizing: border-box;
   }
   main #logo_pc {
-    position: absolute;
-    right: 50%;
-    top: 0;
+    position: relative;
+    left: 50%;
+    top: 3vh;
     transform: translatex(-50%);
-    width: 45vw;
+    width: 55vw;
     background: transparent;
     box-shadow: 0.5vw 0 1vw var(--color-shadow);
     border-radius: 50%;
@@ -390,11 +390,10 @@
   #nawigacja ul li a {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 1vh 1.5vw;
     color: var(--color-text);
     text-decoration: none;
-    font-size: 3vh;
-    font-weight: bold;
     border-radius: 1vh;
     transition: all 0.3s ease-in-out;
   }
@@ -412,8 +411,7 @@
     background: var(--color-hover-bg);
   }
   #nawigacja ul li a img {
-    margin-right: 1vw;
-    width: 3vw;
+    width: 80%;
     transition: filter 0.2s ease-in-out;
   }
   #linki {
@@ -428,7 +426,7 @@
     justify-content: center;
   }
   #sekcja-main {
-    height: 100vh;
+    height: 80vh;
   }
   #sekcja-main p {
     font-style: italic;
@@ -439,14 +437,16 @@
     font-size: 3vh;
   }
   #sekcja-projekty {
-    height: 100vh;
+    height: auto;
+    padding: 10vh 0;
     position: relative;
     background-color: var(--color-secondary-background);
-    flex-direction: row;
+    flex-direction: column;
+    gap: 5vh;
   }
   #sekcja-projekty .karta-projektu {
-    width: 19vw;
-    height: 60vh;
+    width: 70vw;
+    height: 55vh;
     position: relative;
     border: 0.1vh solid #ddd;
     border-radius: 1vw;
@@ -456,7 +456,7 @@
     box-shadow: 0 4px 12px var(--color-shadow);
   }
   #sekcja-projekty .karta-projektu img {
-    max-width: 90%;
+    max-width: 80%;
     margin: 0 auto;
     object-fit: cover;
   }
@@ -511,7 +511,7 @@
   }
   h2 {
     position: absolute;
-    top: 10%;
+    top: 2%;
   }
   p {
     font-size: 1.7vh;

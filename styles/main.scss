@@ -86,7 +86,6 @@ header {
     margin-bottom: 12vh;
     box-shadow: 0.5vw 0 1vw var(--color-shadow);
     border-radius: 50%;}
-
 }
 
 main {
@@ -453,7 +452,7 @@ html, body {
 
 header {
   width: 20vw;
-  height: 40vh;
+  height: 35vh;
   padding-top: 4vh;
   position: absolute;
   right: 0;
@@ -466,6 +465,7 @@ header {
   box-shadow: 0.5vw 0 2vw var(--color-shadow);
 
   #logo_tel {display: none;}
+
 }
 
 main {
@@ -475,11 +475,11 @@ main {
   box-sizing: border-box;
 
   #logo_pc{
-    position: absolute;
-    right: 50%;
-    top: 0;
+    position: relative;
+    left: 50%;
+    top: 3vh;
     transform: translatex(-50%);
-    width: 45vw;
+    width: 55vw;
     background: transparent;
     box-shadow: 0.5vw 0 1vw var(--color-shadow);
     border-radius: 50%;
@@ -499,11 +499,10 @@ main {
       a {
         display: flex;
         align-items: center;
+        justify-content: center;
         padding: 1vh 1.5vw;
         color: var(--color-text);
         text-decoration: none;
-        font-size: 3vh;
-        font-weight: bold;
         border-radius: 1vh;
         transition: all 0.3s ease-in-out;
 
@@ -524,8 +523,7 @@ main {
         }
         
         img {
-          margin-right: 1vw;
-          width: 3vw;
+          width: 80%;
           transition: filter 0.2s ease-in-out;
         }
       }
@@ -535,7 +533,6 @@ main {
 
 
 #linki {display: none;}
-
 
 section {
   box-sizing: border-box;
@@ -547,7 +544,7 @@ section {
 }
 
 #sekcja-main {
-  height: 100vh;
+  height: 80vh;
 
   p {
     font-style: italic;
@@ -561,14 +558,16 @@ h1 {
 }
 
 #sekcja-projekty {
-  height: 100vh;
+  height: auto;
+  padding: 10vh 0;
   position: relative;
   background-color: var(--color-secondary-background);
-  flex-direction: row;
+  flex-direction: column;
+  gap: 5vh;
 
   .karta-projektu {
-    width: 19vw;
-    height: 60vh;
+    width: 70vw;
+    height: 55vh;
     position: relative;
     border: 0.1vh solid #ddd;
     border-radius: 1vw;
@@ -578,7 +577,7 @@ h1 {
     box-shadow: 0 4px 12px var(--color-shadow);
 
     img {
-      max-width: 90%;
+      max-width: 80%;
       margin: 0 auto;
       object-fit: cover;
     }
@@ -644,7 +643,7 @@ h1 {
 
 h2 {
   position: absolute;
-  top: 10%;
+  top: 2%;
 }
 
 p {
