@@ -91,6 +91,9 @@
     border-radius: 1vh;
     transition: all 0.3s ease-in-out;
   }
+  #nawigacja ul li a img {
+    filter: none;
+  }
   #nawigacja ul li a:hover {
     transform: scale(1.03);
     background: var(--color-hover-bg);
@@ -349,7 +352,7 @@
   header {
     width: 17vw;
     height: 32vh;
-    padding-top: 4vh;
+    padding-top: 1vh;
     border-radius: 5vw;
     position: absolute;
     right: 2vw;
@@ -396,6 +399,7 @@
     margin: 1vh 0;
   }
   #nawigacja ul li a {
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -457,7 +461,7 @@
   }
   #sekcja-projekty .karta-projektu {
     width: 70vw;
-    height: 55vh;
+    height: 60vh;
     position: relative;
     border: 0.1vh solid #ddd;
     border-radius: 1vw;
@@ -508,7 +512,7 @@
     align-items: center;
     justify-content: center;
     top: 2vh;
-    right: 0.8vw;
+    right: 4vw;
     filter: brightness(0) saturate(0%) opacity(0.5);
   }
   #sekcja-projekty .projekt-team label {
@@ -516,7 +520,7 @@
     margin: auto 0;
   }
   #sekcja-projekty .projekt-team img {
-    width: 2vw;
+    width: 5vw;
     height: 3vh;
     padding-bottom: 0.5vh;
   }
@@ -563,6 +567,7 @@
   }
   main {
     user-select: none;
+    filter: blur(0.5vh);
   }
   @keyframes puls {
     50% {
@@ -571,7 +576,6 @@
     }
   }
   #WIP {
-    display: none;
     position: absolute;
     top: 50%;
     left: 59%;
