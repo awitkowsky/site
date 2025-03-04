@@ -12,6 +12,12 @@
       "purpose": "any"
     },
     {
+      "src": "grafiki/A_cherry_W_mini.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
       "src": "grafiki/icons8-customer-48.png",
       "type": "image/png",
       "sizes": "48x48",
@@ -25,7 +31,7 @@
     },
     {
       "src": "grafiki/icons8-homepage-48.png",
-      "type": "image/svg",
+      "type": "image/png",
       "sizes": "48x48",
       "purpose": "any"
     },
