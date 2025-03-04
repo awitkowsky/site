@@ -59,14 +59,14 @@
     {
       "src": "grafiki/ss02_light.png",
       "type": "image/png",
-      "sizes": "1919x1079",
+      "sizes": "675x976",
       "form_factor": "narrow",
       "label": "Welcome screen (narrow, light theme)"
     },
     {
       "src": "grafiki/ss02_dark.png",
       "type": "image/png",
-      "sizes": "1919x1079",
+      "sizes": "675x976",
       "form_factor": "narrow",
       "label": "Welcome screen (narrow, dark theme)"
     }

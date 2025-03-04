@@ -1,5 +1,5 @@
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('ServiceWorker-SCI.js').then(function () {
+    navigator.serviceWorker.register('ServiceWorker-Awitkowsky.js').then(function () {
         console.info('ServiceWorker zainstalowany');
     }).catch(function (err) {
         console.info('ServiceWorker nie zainstalowany, sprawdź błąd:', err)
@@ -9,7 +9,7 @@ if ('serviceWorker' in navigator) {
 const APP_CACHE = 'appCache';
 const MY_FILES = [
         '/index.html',
-		'/style.css',
+		'/styles/main.css',
 		'/script.js'
 		
 ];
