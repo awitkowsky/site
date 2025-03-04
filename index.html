@@ -3,19 +3,33 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Junior WebDeveloper portfolio">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Tailwind, Portfolio">
+    <meta name="author" content="Awitkowsky">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="ServiceWorker-Awitkowsky.js"></script>
+	<link rel="manifest" href="https://awitkowsky.netlify.app/manifest-Awitkowsky.json"/>
+
+	<!-- <link rel="canonical" href="https://localhost:9013/"> -->
+
     <title>Awitkowsky - portfolio</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="grafiki/A_cherry_W.png">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
     <header>
-        <img src="grafiki/A_cherry_W.png" id="logo_tel" alt="logo">
+        <picture>
+            <source media="(min-width:650px)" srcset="grafiki/A_cherry_W.png">
+            <source media="(min-width:465px)" srcset="grafiki/A_cherry_W_mid.png">
+            <img src="grafiki/A_cherry_W_mini.png" id="logo_tel" alt="logo">
+        </picture>
 
         <nav id="nawigacja">
             <ul>
-                <li><a href="#sekcja-main"><img src="grafiki/icons8-homepage-48.svg" alt="home_page_icon"><span class="text">Main</span></a></li>
+                <li><a href="#sekcja-main"><img src="grafiki/icons8-homepage-48.png" alt="home_page_icon"><span class="text">Main</span></a></li>
                 <li><a href="#sekcja-projekty"><img src="grafiki/icons8-it-48.png" alt="projects_page_icon"><span class="text">Projekty</span></a></li>
                 <li><a href="#sekcja-o-mnie"><img src="grafiki/icons8-customer-48.png" alt="about_page_icon"><span class="text">O mnie</span></a></li>
             </ul>
