@@ -6,6 +6,12 @@
   "id": "https://awitkowsky.netlify.app/",
   "icons": [
     {
+      "src": "grafiki/A_cherry_W.png",
+      "type": "image/png",
+      "sizes": "3000x3000",
+      "purpose": "any"
+    },
+    {
       "src": "grafiki/icons8-customer-48.png",
       "type": "image/png",
       "sizes": "48x48",
@@ -37,14 +43,32 @@
   "theme_color": "#F08143",
   "screenshots": [
     {
-      "src": "grafiki/ss01.png",
+      "src": "grafiki/ss01_light.png",
       "type": "image/png",
-      "sizes": "1919x1079"
+      "sizes": "1919x1079",
+      "form_factor": "wide",
+      "label": "Welcome screen (wide, light theme)"
     },
     {
-      "src": "grafiki/ss02.png",
+      "src": "grafiki/ss01_dark.png",
       "type": "image/png",
-      "sizes": "1919x1079"
+      "sizes": "1919x1079",
+      "form_factor": "wide",
+      "label": "Welcome screen (wide, dark theme)"
+    },
+    {
+      "src": "grafiki/ss02_light.png",
+      "type": "image/png",
+      "sizes": "1919x1079",
+      "form_factor": "narrow",
+      "label": "Welcome screen (narrow, light theme)"
+    },
+    {
+      "src": "grafiki/ss02_dark.png",
+      "type": "image/png",
+      "sizes": "1919x1079",
+      "form_factor": "narrow",
+      "label": "Welcome screen (narrow, dark theme)"
     }
   ],
   "prefer_related_applications": false,
