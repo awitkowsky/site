@@ -14,7 +14,7 @@
     {
       "src": "grafiki/A_cherry_W_mini.png",
       "type": "image/png",
-      "sizes": "500x500",
+      "sizes": "192x192",
       "purpose": "any"
     },
     {
@@ -43,10 +43,12 @@
     }
   ],
   "start_url": "/",
+  "theme_color": "#F08143",
   "background_color": "#fafafa",
+  "orientation": "any",
   "display": "fullscreen",
   "scope": "/",
-  "theme_color": "#F08143",
+
   "screenshots": [
     {
       "src": "grafiki/ss01_light.png",
