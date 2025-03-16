@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <title>Znaki - Pai6</title>
+    <script src="znaki.js"></script>
+</head>
+<body>
+    <form action="" method="post">
+
+        <label for="login">Login: </label>
+        <input type="text" maxlength="22" id="login" name="login" onkeyup="znaki(event)" required>
+        <br>
+
+        <label for="imie">Imie: </label>
+        <input type="text" maxlength="33" id="imie" name="imie" onkeyup="znaki(event)" required>
+        <br>
+
+        <label for="nazwisko">Nazwisko: </label>
+        <input type="text" maxlength="55" id="nazwisko" name="nazwisko" onkeyup="znaki(event)" required>
+        <br>
+
+        <label for="haslo">Hasło: </label>
+        <input type="password" maxlength="20" id="haslo" name="haslo" onkeyup="znaki(event)" required>
+        <br>
+
+        <label for="opis">Opis: </label>
+        <br>
+        <textarea maxlength="255" id="opis" name="opis" onkeyup="znaki(event)" required></textarea>
+        <br>
+        <br>
+        <br>
+        
+        <label for="test">test: </label>
+        <input type="text" maxlength="1337" id="test" name="test" onkeyup="znaki(event)" required>
+        <br>
+
+        <button type="submit">Submit :)</button>
+    </form>
+</body>
+</html>
