@@ -19,7 +19,7 @@
 
 <body class="flex flex-col min-h-screen items-center text-center pt-6 bg-gray-100">
     <header class="flex flex-col items-center justify-center w-full bg-gray-100">
-        <img src="grafiki/A_cherry_W.png" id="logo" alt="logo" class="w-1/2 drop-shadow-2xl">
+        <img src="grafiki/A_cherry_W.png" id="logo" alt="logo" class="w-3/5 drop-shadow-2xl">
 
         <nav id="nawigacja" class="hidden">
             <ul>
@@ -62,18 +62,22 @@
     </header>
 
     <main class="flex-col w-full pt-6">
-        <section id="sekcja-main" class="flex flex-col items-center justify-center h-215 pb-50 w-full bg-gray-100 text-5xl font-semibold tracking-wide">
+        <section id="sekcja-main" class="flex flex-col items-center justify-center h-235 pb-50 w-full bg-gray-100 text-4xl font-semibold tracking-wide">
             <h1 class="drop-shadow-lg">Hej, jestem Antek.</h1>
             <h1 class="drop-shadow-lg">Tworzę strony i aplikacje webowe.</h1>
-            <p class="text-xl font-normal pt-3 italic drop-shadow-lg">Dodatkowo jestem uczniem i cały czas się uczę 😉
-            </p>
+            <p class="text-xl font-normal pt-3 italic drop-shadow-lg">Dodatkowo jestem uczniem i cały czas się uczę 😉</p>
         </section>
 
         <section id="sekcja-projekty" class="flex flex-col gap-12 items-center justify-center h-auto pb-40 pt-10 w-full bg-gray-200 z-10">
-            <h2 class="text-5xl font-bold">Projekty</h2>
-            <div class="w-2/3 h-200 flex flex-col items-center justify-center gap-5 bg-gray-100 p-5">
-                <h3 class="text-3xl font-semibold">AdopTails</h3>
-                <p class="mt-auto">
+            <h2 class="text-4xl font-bold">Projekty</h2>
+            <div class="w-2/3 h-200 flex flex-col items-center justify-center gap-5 bg-gray-100 p-7 rounded-3xl drop-shadow-2xl">
+                <div class="flex flex-row items-center ml-auto absolute top-4 right-4">
+                    <p class="text-3xl">1</p>
+                    <img src="grafiki/icons8-person-64.png" alt="person_icon" class="w-14">
+                </div>
+                <img src="grafiki/adoptails-logo.png" alt="AdopTails_logo" class="w-9/10">
+                <h3 class="text-4xl font-semibold mt-auto">AdopTails</h3>
+                <p class="text-lg">
                     Aplikacja internetowa służąca do adopcji zwierząt. Ma na celu wsparcie schronisk o platformę do
                     zarządania
                     zwierzętami do adopcji oraz samymi adopcjami. Projekt ma jedynie chrakter charytatywny. Dodatkowo
@@ -81,11 +85,16 @@
                     stworzona aplikacja PWA.
                 </p>
                 <p><strong>Technologie:</strong> HTML, CSS, PHP, SQL, phpMyAdmin</p>
-                <a href="https://adoptails.maventplan.pl/">Zobacz projekt</a>
+                <a href="https://adoptails.maventplan.pl/" class="rounded-xl w-2/5 text-white h-10 p-2 bg-amber-600 drop-shadow-lg">Zobacz projekt</a>
             </div>
-            <div class="w-2/3 h-200 flex flex-col items-center justify-center relative gap-5 bg-gray-100 p-5">
-                <h3 class="text-3xl font-semibold">Fréni</h3>
-                <p class="mt-auto">
+            <div class="w-2/3 h-200 flex flex-col items-center justify-center gap-5 bg-gray-100 p-7 rounded-3xl drop-shadow-2xl">
+                <div class="flex flex-row gap-x-0 items-center ml-auto absolute top-4 right-4">
+                    <p class="text-3xl">3</p>
+                    <img src="grafiki/icons8-person-64.png" alt="person_icon" class="w-14">
+                </div>
+                <p class="text-2xl tracking-wide text-black/25">Work in progres..</p>
+                <h3 class="text-4xl font-semibold mt-auto">Fréni</h3>
+                <p class="text-lg">
                     System do zarządzania projektami, zorientowany na użytkownika, z możliwością dostosowywania do
                     potrzeb użytkownika.
                     Zakładane możliwości: projekty „prywatne" i „publiczne", zarządzanie użytkownikami poprzez role,
@@ -93,18 +102,19 @@
                     systemu oparte możliwie na systemie „przeciągnij i upuść".
                 </p>
                 <p><strong>Technologie:</strong> HTML, CSS, JavaScript, Cypher, Neo4j</p>
-                <a href="#">Zobacz projekt</a>
+                <a href="#" class="rounded-xl w-2/5 text-white h-10 p-2 bg-amber-600 drop-shadow-lg">Zobacz projekt</a>
             </div>
         </section>
 
-        <section id="sekcja-o-mnie" class="flex flex-col items-center justify-center h-230 w-full bg-gray-100">
-            <h1>O mnie</h1>
-            <p>Coś o mnie...</p>
+        <section id="sekcja-o-mnie" class="flex flex-col items-center justify-center h-260 w-full bg-gray-100 text-4xl font-semibold tracking-wide">
+            <h1 class="drop-shadow-lg">O MNIE</h1>
+            <p class="text-xl font-normal pt-2 italic drop-shadow-lg">Coś o mnie...</p>
         </section>
     </main>
 
-    <footer>
-        <p>Napisane z uczuciem przez &copy;<i><b>Awitkowsky</b></i></p>
+    <footer class="flex flex-row gap-1">
+        <p class="italic text-md">Napisane z uczuciem przez </p>
+        <p class="font-bold text-base">&copy;Awitkowsky</p>
     </footer>
 
     <script src="script.js"></script>
