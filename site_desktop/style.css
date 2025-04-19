@@ -31,7 +31,7 @@
     font-family: Arial, sans-serif;
   }
   .dark-mode main{
-    background-image: url(grafiki/dark_background.jpg);
+    background-image: url(../grafiki/dark_background.jpg);
   }
   #nawigacja ul li a {
     transition: all 0.3s ease-in-out;
