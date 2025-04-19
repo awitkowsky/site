@@ -8,4 +8,22 @@
   --color-shadow: rgba(0, 0, 0, 0.2);
   --color-shadow-light: rgba(0, 0, 0, 0.05);
   --color-hover-bg: rgba(255, 255, 255, 0.8);
+  --color-wave:#1e1e1e;
+}
+
+.animate-wave {
+  animation: wave 8s linear infinite;
+}
+.animate-wave-copy {
+  animation: waveCopy 10s linear infinite;
+}
+
+@keyframes wave {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes waveCopy {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50%); }
 }

@@ -117,6 +117,7 @@
     height: 17vh;
     background: url('data:image/svg+xml,<svg viewBox="0 0 1440 150" xmlns="http://www.w3.org/2000/svg"><path fill="%23f3f4f6" transform="scale(1,-1) translate(0,-150)" d="M0,120 Q180,30 360,90 T720,120 T1080,60 T1440,120 L1440,150 L0,150Z"></path></svg>') no-repeat center/cover;
     transition: all 0.5s ease;
+    z-index: 20;
   }
   .dark-mode #sekcja-o-mnie::before {
     content: "";
@@ -127,6 +128,7 @@
     height: 17vh;
     background: url('data:image/svg+xml,<svg viewBox="0 0 1440 150" xmlns="http://www.w3.org/2000/svg"><path fill="%232a2a2a" transform="scale(1,-1) translate(0,-150)" d="M0,120 Q180,30 360,90 T720,120 T1080,60 T1440,120 L1440,150 L0,150Z"></path></svg>') no-repeat center/cover;
     transition: all 0.5s ease;
+    z-index: 20;
   }
 
     
@@ -161,5 +163,3 @@
     0% { transform: translateX(0); }
     100% { transform: translateX(50%); }
 }
-
-

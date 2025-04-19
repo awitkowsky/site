@@ -19,7 +19,7 @@
 </head>
 
 <body class="flex size-full bg-[var(--color-background)] text-[var(--color-text)]">
-    <header class="w-[20vw] h-screen pt-10 fixed top-0 left-0 flex flex-col items-center z-10 shadow-[0.5vw_0_2vw_var(--color-shadow)]">
+    <header class="w-[20vw] h-screen pt-10 fixed top-0 left-0 flex flex-col items-center z-10 shadow-[0.5vw_0_2vw_var(--color-shadow)] z-100">
         <img src="../grafiki/A_cherry_W.png" id="logo" alt="logo" class="w-7/10 mb-12 shadow-[0.5vw_0_2vw_var(--color-shadow)] rounded-full">
 
         <nav id="nawigacja" class="w-7/10">
@@ -67,10 +67,9 @@
             </ul>
         </nav>
         
-        
     </header>
     
-    <main class="ml-[20vw] w-[80vw] h-[100vh] overflow-y-auto bg-[url('../grafiki/background.jpg')]">
+    <main class="ml-[20vw] w-[80vw] h-[100vh] overflow-y-auto">
         <section id="sekcja-main" class="relative flex flex-col items-center justify-center h-screen w-full text-4xl font-semibold tracking-wide">
             <h1 class="drop-shadow-lg tracking-tight">Hej, jestem Antek.</h1>
             <h1 class="drop-shadow-lg tracking-tight">Tworzę strony i aplikacje webowe.</h1>
@@ -121,17 +120,22 @@
                 <a href="#" class="rounded-xl w-3/5 text-white text-center h-10 p-2 bg-amber-600 drop-shadow-lg">Zobacz projekt</a>
             </div>
         </div>
-
-        <div class="absolute bottom-[-15vh] left-0 w-full overflow-hidden">
-            <svg viewBox="0 0 1440 150" xmlns="http://www.w3.org/2000/svg" class="w-full animate-wave absolute">
-                <path fill="var(--color-wave)" d="M 0 40 Q 180 130 360 70 T 720 40 T 1080 100 T 1440 40 L 1440 10 L 0 10 Z"></path>
-            </svg>
-            <svg viewBox="0 0 1440 150" xmlns="http://www.w3.org/2000/svg" class="w-full animate-wave-copy">
-                <path fill="var(--color-wave)" d="M 0 40 Q 180 130 360 70 T 720 40 T 1080 100 T 1440 40 L 1440 10 L 0 10 Z"></path>
-            </svg>
         </section>        
     
         <section id="sekcja-o-mnie" class=" flex flex-col items-center justify-center h-160 w-full font-semibold tracking-wide p-4 pt-7">
+
+            <div class="absolute top-0 left-0 w-full overflow-hidden z-10">
+                <svg viewBox="0 0 2880 150" xmlns="http://www.w3.org/2000/svg" class="w-[200%] animate-wave absolute transform rotate-180">
+                  <path fill="var(--color-wave)" d="M1440,120 Q1260,30 1080,90 T720,120 T360,60 T0,120 L0,150 L1440,150Z"></path>
+                  <path fill="var(--color-wave)" d="M2880,120 Q2700,30 2520,90 T2160,120 T1800,60 T1440,120 L1440,150 L2880,150Z"></path>
+                </svg>
+                <svg viewBox="0 0 2880 150" xmlns="http://www.w3.org/2000/svg" class="w-[200%] animate-wave-copy transform rotate-180">
+                  <path fill="var(--color-wave)" d="M1440,120 Q1260,30 1080,90 T720,120 T360,60 T0,120 L0,150 L1440,150Z"></path>
+                  <path fill="var(--color-wave)" d="M2880,120 Q2700,30 2520,90 T2160,120 T1800,60 T1440,120 L1440,150 L2880,150Z"></path>
+                </svg>
+              </div>
+              
+
             <h2 class="tytul text-5xl font-semibold drop-shadow-lg relative text-center after:content-[''] after:block after:w-50 after:h-1 after:bg-amber-500 after:mx-auto after:mt-2 mb-6">O mnie</h2>
             <div class="max-w-3xl text-lg leading-relaxed space-y-4">
                 <p>Cześć! Jestem Antek – na co dzień zajmuję się <strong>analizą bezpieczeństwa i testami penetracyjnymi</strong>, a web development to moje hobby, które często łączy się z pentestingiem.</p>
