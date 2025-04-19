@@ -1,0 +1,85 @@
+{
+  "short_name": "AW@portfolio",
+  "name": "Awitkowsky WevDev portfolio",
+  "description": "PWA @ Awitkowsky",
+  "lang": "pl",
+  "id": "https://awitkowsky.netlify.app/",
+  "icons": [
+    {
+      "src": "grafiki/A_cherry_W.png",
+      "type": "image/png",
+      "sizes": "3000x3000",
+      "purpose": "any"
+    },
+    {
+      "src": "grafiki/A_cherry_W_mini.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "grafiki/icons8-customer-48.png",
+      "type": "image/png",
+      "sizes": "48x48",
+      "purpose": "any"
+    },
+    {
+      "src": "grafiki/icons8-it-48.png",
+      "type": "image/png",
+      "sizes": "48x48",
+      "purpose": "any"
+    },
+    {
+      "src": "grafiki/icons8-homepage-48.png",
+      "type": "image/png",
+      "sizes": "48x48",
+      "purpose": "any"
+    },
+    {
+      "src": "grafiki/icons8-person-64.png",
+      "type": "image/png",
+      "sizes": "64x64",
+      "purpose": "any"
+    }
+  ],
+  "start_url": "/",
+  "theme_color": "#F2F3F5",
+  "background_color": "#fafafa",
+  "orientation": "any",
+  "display": "fullscreen",
+  "scope": "/",
+
+  "screenshots": [
+    {
+      "src": "grafiki/ss01_light.png",
+      "type": "image/png",
+      "sizes": "1919x1079",
+      "form_factor": "wide",
+      "label": "Welcome screen (wide, light theme)"
+    },
+    {
+      "src": "grafiki/ss01_dark.png",
+      "type": "image/png",
+      "sizes": "1919x1079",
+      "form_factor": "wide",
+      "label": "Welcome screen (wide, dark theme)"
+    },
+    {
+      "src": "grafiki/ss02_light.png",
+      "type": "image/png",
+      "sizes": "675x976",
+      "form_factor": "narrow",
+      "label": "Welcome screen (narrow, light theme)"
+    },
+    {
+      "src": "grafiki/ss02_dark.png",
+      "type": "image/png",
+      "sizes": "675x976",
+      "form_factor": "narrow",
+      "label": "Welcome screen (narrow, dark theme)"
+    }
+  ],
+  "prefer_related_applications": false,
+  "dir": "ltr",
+  "categories": ["business", "portfolio", "development"]
+}
