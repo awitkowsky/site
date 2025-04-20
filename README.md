@@ -92,6 +92,7 @@ Projekt został stworzony przy użyciu:
 - Obsługa motywów
 - Podstaw deployowania aplikacji na Netlify
 - Pracy na troszkę większym projekcjie
+- Korzystania z github repozytorium (tak, wcześniej nie ogarniałem...)
 
 
 ## ⚠️ Znane problemy / TODO
