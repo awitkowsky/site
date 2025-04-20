@@ -1,10 +1,30 @@
 # 🧑‍💻 Portfolio – Antoni Witkowski
 
-Moje portfolio jako junior frontend developera. Zawiera projekty (duże oraz mniejsze jako szybki pokaz umiejętności), informacje o mnie i dane kontaktowe. Zbudowane z pasją, żeby pokazać moje umiejętności w praktyce.
+> Moje portfolio jako junior frontend developera. Zawiera projekty (duże oraz mniejsze jako szybki pokaz umiejętności), informacje o mnie i dane kontaktowe. Zbudowane z pasją, żeby pokazać moje umiejętności w praktyce.
+
+## 📚 Spis treści
+
+- [🧠 TL;DR](#-tldr)
+- [🔗 Demo](#-demo)
+- [🛠️ Technologie](#️-technologie)
+- [🧭 Struktura projektu](#-struktura-projektu)
+- [📌 Funkcje](#-funkcje)
+- [📷 Zrzuty ekranu](#-zrzuty-ekranu)
+- [🧠 Czego się nauczyłem](#-czego-się-nauczyłem)
+- [📬 Kontakt](#-kontakt)
+- [⚠️ Znane problemy  todo](#️-znane-problemy--todo)
+
+
+## 🧠 TL;DR
+
+To moje osobiste portfolio stworzone jako frontend developer. Zawiera moje projekty, kilka efektownych dodatków i informacje o mnie. Zbudowane z użyciem HTML, Tailwinda i czystego JavaScriptu, bez dodatkowych frameworków. 
+Postawiłem na prostotę, czytelność i responsywność — tak, żeby dobrze wyglądało i na desktopie, i na telefonie. Wersja beta, ale cały czas rozwijana!
+
 
 ## 🔗 Demo
 
-[Kliknij tutaj, aby zobaczyć live](https://awitkowsky.netlify.app/)
+[Przejdź do strony](https://awitkowsky.netlify.app/)
+
 
 ## 🛠️ Technologie
 
@@ -16,36 +36,48 @@ Projekt został stworzony przy użyciu:
 - Netlify (hostowanie)
 - JsDoc
 
+
 ## 🧭 Struktura projektu
 
-/ 
-├── grafiki/ # Obrazy i grafika użyta na stronie 
-├── site_desktop/ # Wersja desktopowa strony 
-│ ├── index.html 
-│ ├── style.css 
-│ ├── script.js 
-│ └── projekty/  
-├── site_mobile/ # Wersja mobilna 
-│ ├── index.html 
-│ ├── style.css 
-│ └── script.js 
-├── index.html # Główna strona (landing) 
-├── style.css 
-├── script.js 
-├── manifest-Awitkowsky.json # Manifest PWA 
-└── ServiceWorker-Awitkowsky.js # Service Worker (PWA)
+├── grafiki/ # Obrazy i grafika użyta na stronie  
+├── site_desktop/ # Wersja desktopowa strony  
+│ ├── index.html  
+│ ├── style.css  
+│ ├── script.js  
+│ └── projekty/   
+├── site_mobile/ # Wersja mobilna  
+│ ├── index.html  
+│ ├── style.css  
+│ └── script.js  
+├── index.html # Główna strona (landing)  
+├── style.css  
+├── script.js  
+├── manifest-Awitkowsky.json # Manifest PWA  
+└── ServiceWorker-Awitkowsky.js # Service Worker (PWA) 
 
-To jest jeszcze wersja beta, nie wszystkie pliki są uproszczone tak jak trzeba i część z nich niedługo zniknie :)
+> To jest jeszcze wersja beta, nie wszystkie pliki są uproszczone tak jak trzeba i część z nich niedługo zniknie 😉
+  
+  
+## 📷 Zrzuty ekranu
 
+### Wersja na PC:
+<div align="center">
+  <img src="https://github.com/awitkowsky/site/blob/main/grafiki/ss01_light.png" width="45%" />
+  &nbsp;&nbsp;&nbsp;
+  <img src="https://github.com/awitkowsky/site/blob/main/grafiki/ss01_dark.png" width="45%" />
+</div>
 
-## 📷 Zrzuty ekranu (TODO)
+### Wersja mobilna:
+<div align="center">
+  <img src="https://github.com/awitkowsky/site/blob/main/grafiki/ss02_light.png" width="30%" />
+  &nbsp;&nbsp;&nbsp;
+  <img src="https://github.com/awitkowsky/site/blob/main/grafiki/ss02_dark.png" width="30%" />
+</div>
 
-![Zrzut ekranu 1](link-do-obrazka)
-![Zrzut ekranu 2](link-do-obrazka)
 
 ## 📌 Funkcje
 
-- Przejrzysta prezentacja projektów (JsDoc)
+- Przejrzysta prezentacja projektów live (JsDoc)
 - Sekcja "O mnie"
 - Responsywny design
 - Obsługa motywu jasnego oraz ciemnego
@@ -60,6 +92,15 @@ To jest jeszcze wersja beta, nie wszystkie pliki są uproszczone tak jak trzeba 
 - Obsługa motywów
 - Podstaw deployowania aplikacji na Netlify
 - Pracy na troszkę większym projekcjie
+
+
+## ⚠️ Znane problemy / TODO
+
+- [ ] Lepsza organizacja folderów (połączenie wersji desktop/mobile)
+- [ ] Zoptymalizowanie obrazów
+- [ ] Dodanie wersji językowej EN
+- [ ] Wprowadzenie drobnych poprawek graficznych (aby wszystko wyświetało się dobrze/spójnie, na każdym wyświetlaczu/rozdzielczości)
+- [ ] Dodanie większej ilości zrzutów ekranów
 
 
 ## 📬 Kontakt
