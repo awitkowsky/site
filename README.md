@@ -107,3 +107,4 @@ Projekt został stworzony przy użyciu:
 
 - Mail: awitkowski.contact@gmail.com
 - GitHub: [awitkowsky](https://github.com/twoj-login)
+- Linkedin: [awitkowsky](https://www.linkedin.com/in/antoniwitkowski/)
