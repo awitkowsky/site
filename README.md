@@ -103,6 +103,12 @@ Projekt został stworzony przy użyciu:
 - [ ] Dodanie większej ilości zrzutów ekranów
 
 
+## 🛡️ Licencja
+
+Brak otwartej licencji. Nie kopiuj ani nie używaj bez mojej zgody.
+
+
+
 ## 📬 Kontakt
 
 - Mail: awitkowski.contact@gmail.com
