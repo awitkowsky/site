@@ -20,22 +20,20 @@
 
 <body class="flex size-full text-[var(--color-text)]">
   <main class="w-screen h-screen bg-[url('grafiki/background.jpg')] dark:bg-[url('grafiki/dark_background.jpg')] bg-cover bg-center">
-    <section class="flex flex-row items-center justify-center w-full h-full gap-10 relative">
+    <section class="flex flex-row items-center justify-around  w-full h-full relative">
+      <div class="flex flex-col items-center justify-center relative rounded-3xl drop-shadow-2xl">
+          <a href="site_desktop/index.html" class="flex md:flex-row flex-col text-center items-center gap-6 px-5 py-2 text-[4vh] font-bold rounded-lg transition-all duration-300 ease-in-out hover:scale-[1.03] hover:bg-[var(--color-hover-bg)]">
+              <img src="grafiki/icons8-desktop-50.png" alt="desktop_icon" class="test_img">
+              <h1>Wersja PC</h1>
+          </a>
+      </div>
 
-    <div class="flex flex-col items-center justify-center relative rounded-3xl drop-shadow-2xl">
-        <a href="site_desktop/index.html" class="flex md:flex-row flex-col text-center items-center gap-8 px-5 py-2 text-[4vh] font-bold rounded-lg transition-all duration-300 ease-in-out hover:scale-[1.03] hover:bg-[var(--color-hover-bg)]">
-            <img src="grafiki/icons8-desktop-50.png" alt="desktop_icon" class="test_img">
-            <h1>Wersja PC</h1>
-        </a>
-    </div>
-
-    <div class="flex flex-col items-center justify-center gap-5 relative rounded-3xl drop-shadow-2xl">
-        <a href="site_mobile/index.html" class="flex md:flex-row flex-col text-center items-center gap-4 px-5 py-2 text-[4vh] font-bold rounded-lg transition-all duration-300 ease-in-out hover:scale-[1.03] hover:bg-[var(--color-hover-bg)]">
-            <img src="grafiki/icons8-smartphone-50.png" alt="smartphone_icon" class="test_img">
-            <h1>Wersja mobilna</h1>
-        </a>
-    </div>
-
+      <div class="flex flex-col items-center justify-center gap-5 relative rounded-3xl drop-shadow-2xl">
+          <a href="site_mobile/index.html" class="flex md:flex-row flex-col text-center items-center gap-6 px-5 py-2 text-[4vh] font-bold rounded-lg transition-all duration-300 ease-in-out hover:scale-[1.03] hover:bg-[var(--color-hover-bg)]">
+              <img src="grafiki/icons8-smartphone-50.png" alt="smartphone_icon" class="test_img">
+              <h1 class="tracking-tighter">Wersja mobilna</h1>
+          </a>
+      </div>
     </section>
   </main>
   <script src="script.js"></script>
