@@ -106,5 +106,6 @@ Projekt został stworzony przy użyciu:
 ## 📬 Kontakt
 
 - Mail: awitkowski.contact@gmail.com
-- GitHub: [awitkowsky](https://github.com/twoj-login)
+- GitHub: [awitkowsky](https://github.com/awitkowsky)
 - Linkedin: [awitkowsky](https://www.linkedin.com/in/antoniwitkowski/)
+- Discord: a_cherry_w#0000
