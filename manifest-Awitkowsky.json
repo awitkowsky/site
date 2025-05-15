@@ -6,13 +6,13 @@
   "id": "https://awitkowsky.netlify.app/",
   "icons": [
     {
-      "src": "grafiki/A_cherry_W.png",
+      "src": "grafiki/A_cherry_W_big.png",
       "type": "image/png",
       "sizes": "3000x3000",
       "purpose": "any"
     },
     {
-      "src": "grafiki/A_cherry_W_mini.png",
+      "src": "grafiki/A_cherry_W.png",
       "type": "image/png",
       "sizes": "500x500",
       "purpose": "any"
