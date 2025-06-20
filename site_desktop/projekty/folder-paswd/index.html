@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icons/lock.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Password checker</title>
+</head>
+<body>
+
+    <main>
+        <h1>Password checker</h1>
+
+        <div id="container">
+            <div id="password_container">    
+                <input type="password" id="paswd" placeholder="Sprawdź swoje hasło" onkeyup="haslo(this.value)">
+
+                <img src="icons/closed-eye.png" id="eyeToggle" onclick="toggleEye()" style="cursor: pointer; height: 3vh;">
+            </div>
+
+            <select name="poziom" id="poziom" onchange="trudnosc(poziom.value)">
+                <option value="Łatwy">Łatwy</option>
+                <option value="Średni" selected>Średni</option>
+                <option value="Trudny">Trudny</option>
+                <option value="S.I.G.M.A">S.I.G.M.A</option>
+            </select>
+        </div>
+
+        <section id="progress">
+            <div></div>
+        </section>
+
+        <ul id="wymagania"></ul>
+
+    </main>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,131 @@
+body{
+    background-image: linear-gradient(155deg, #76b7a3, #036272);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main{
+    width: 35vw;
+    height: 69vh;
+    border: 0.5vh solid #fff;
+    border-radius: 2vw;
+    filter: drop-shadow(0 0 1vw #fff);
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    color: #fff;
+    font-size: 6vh;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 0.1vw;
+    text-align: center;
+    margin-bottom: 11vh;
+}
+
+#container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#password_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+input[type="password"],
+input[type="text"]{
+    width: 16vw;
+    height: 4vh;
+    border: 0.5vh solid #fff;
+    border-radius: 0.5vw;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-size: 1.8vh;
+}
+input[type="password"]:focus,
+input[type="text"]:focus{
+    outline: none;
+    border-color: #5ea18d;
+}
+
+
+select{
+    width: 7vw;
+    height: 4vh;
+    border: 0.5vh solid #fff;
+    border-radius: 0.5vw;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-size: 1.4vh;
+    font-weight: bold;
+    letter-spacing: 0.1vw;
+}
+select option{
+    border: 0.5vh solid #fff;
+    border-radius: 0.5vw;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-size: 1.3vh;
+    font-weight: bold;
+    letter-spacing: 0.1vw;
+}
+select:focus{
+    outline: none;
+    border-color: #5ea18d;
+}
+
+#progress{
+    width: 90%;
+    height: 2vh;
+    margin-top: 3vh;
+    border: 0.3vh solid #fff;
+    border-radius: 0.5vw;
+    background-color: rgba(255, 255, 255, 0.6);
+    overflow: hidden;
+}
+#progress div{
+    width: 1%;
+    height: 100%;
+    background-color: red;
+    border: none;
+    border-radius: 0.5vw;
+    box-sizing: border-box;
+    transition: width 0.7s ease-in-out;
+}
+
+
+ul {
+    margin-top: 10vh;
+    width: 90%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    color: #fff;
+    font-size: 2.5vh;
+    letter-spacing: 0.1vh;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+li::before {
+    content: "";
+    display: inline-block;
+    width: 2.5vh;
+    height: 2.5vh;
+    margin-right: 0.5vw;
+    background-image: url(icons/shape.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+li.spelnione::before {
+    background-image: url("icons/check-mark.png");
+}
