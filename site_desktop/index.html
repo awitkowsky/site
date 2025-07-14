@@ -1,151 +1,333 @@
 <!DOCTYPE html>
-<html lang="pl" class="m-0 flex max-w-screen max-h-screen bg-[var(--color-background)] text-[var(--color-text)] select-none">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Junior WebDeveloper portfolio">
-    <meta name="keywords" content="HTML, CSS, JavaScript, Tailwind, Portfolio">
-    <meta name="author" content="Awitkowsky">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html
+  lang="pl"
+  class="m-0 flex max-w-screen max-h-screen bg-[var(--color-background)] text-[var(--color-text)] select-none"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Junior WebDeveloper portfolio" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, Tailwind, Portfolio"
+    />
+    <meta name="author" content="Awitkowsky" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <script async src="../ServiceWorker-Awitkowsky.js"></script>
-    <link rel="manifest" href="https://awitkowsky.netlify.app/manifest-Awitkowsky.json"/>
+    <link
+      rel="manifest"
+      href="https://awitkowsky.netlify.app/manifest-Awitkowsky.json"
+    />
 
     <title>Awitkowsky - portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="../grafiki/A_cherry_W.png">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="../grafiki/A_cherry_W.png" />
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
+  </head>
 
-<body class="flex size-full bg-[var(--color-background)] text-[var(--color-text)]">
-    <header class="w-[20vw] h-screen pt-10 fixed top-0 left-0 flex flex-col items-center z-10 shadow-[0.5vw_0_2vw_var(--color-shadow)] z-100">
-        <img src="../grafiki/A_cherry_W.png" id="logo" alt="logo" class="w-7/10 mb-12 shadow-[0.5vw_0_2vw_var(--color-shadow)] rounded-full">
+  <body
+    class="flex size-full bg-[var(--color-background)] text-[var(--color-text)]"
+  >
+    <header
+      class="w-[20vw] h-screen pt-10 fixed top-0 left-0 flex flex-col items-center z-10 shadow-[0.5vw_0_2vw_var(--color-shadow)] z-100"
+    >
+      <img
+        src="../grafiki/A_cherry_W.png"
+        id="logo"
+        alt="logo"
+        class="w-7/10 mb-12 shadow-[0.5vw_0_2vw_var(--color-shadow)] rounded-full"
+      />
 
-        <nav id="nawigacja" class="w-7/10">
-            <ul class="list-none p-0 m-0 gap-y-3 flex flex-col">
-                <li>
-                    <a href="#sekcja-main" class="flex items-center gap-4 px-[2vw] py-2 sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold rounded-lg transition-all duration-300 ease-in-out hover:scale-[1.03] hover:bg-[var(--color-hover-bg)] active:bg-[var(--color-hover-bg)]">
-                        <img src="../grafiki/icons8-homepage-48.png" alt="home_page_icon" class="w-3/10">
-                        <p>Main</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#sekcja-projekty" class="flex items-center gap-4 px-[2vw] py-2 sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold rounded-lg transition-all duration-300 ease-in-out hover:scale-[1.03] hover:bg-[var(--color-hover-bg)] active:bg-[var(--color-hover-bg)]">
-                        <img src="../grafiki/icons8-it-48.png" alt="projects_page_icon" class="w-3/10">
-                        <p>Projekty</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#sekcja-o-mnie" class="flex items-center gap-4 px-[2vw] py-2 sm:text-lg md:text-xl lg:text-2xl xl:text-3xl whitespace-nowrap font-bold rounded-lg hover:scale-[1.03] hover:bg-[var(--color-hover-bg)] active:bg-[var(--color-hover-bg)]">
-                        <img src="../grafiki/icons8-customer-48.png" alt="about_page_icon" class="w-3/10">
-                        <p>O mnie</p>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <br>
-        <button id="przelacz_motyw" aria-label="Przełącz tryb ciemny" class="w-[11vw] h-[4.5vh] p-2 rounded-xl drop-shadow-lg text-[2vh] whitespace-nowrap">🌙 Dark Mode</button>
-        <nav id="linki" class="w-7/9 absolute bottom-0 left-0 w-full text-center pb-2">
-            <ul class="list-none p-0 m-0 gap-y-0 flex flex-col items-center w-full">
-                <li class="font-bold mb-2 sm:text-sm md:text-md lg:text-lg xl:text-xl w-4/5 text-center"><p>Pomniejsze projekty</p></li>
-                <li class="w-full flex justify-center">
-                    <a href="projekty/waz.html" class="block w-4/5 sm:text-xs md:text-sm lg:text-md xl:text-lg text-center hover:bg-[var(--color-hover-bg)] hover:scale-107">Gra w Węża</a>
-                </li>
-                <li class="w-full flex justify-center">
-                    <a href="projekty/kwadrat.html" class="block w-4/5 sm:text-xs md:text-sm lg:text-md xl:text-lg text-center rounded-lg hover:bg-[var(--color-hover-bg)] hover:scale-107">Funkcja kwadratowa</a>
-                </li>
-                <li class="w-full flex justify-center">
-                    <a href="projekty/pong.html" class="block w-4/5 sm:text-xs md:text-sm lg:text-md xl:text-lg text-center rounded-lg hover:bg-[var(--color-hover-bg)] hover:scale-107">Ping Pong</a>
-                </li>
-                <li class="w-full flex justify-center">
-                    <a href="projekty/paswd_check.html" class="block w-4/5 sm:text-xs md:text-sm lg:text-md xl:text-lg text-center rounded-lg hover:bg-[var(--color-hover-bg)] hover:scale-107">Moc hasła</a>
-                </li>
-            </ul>
-        </nav>
-        
+      <nav id="nawigacja" class="w-7/10">
+        <ul class="list-none p-0 m-0 gap-y-3 flex flex-col">
+          <li>
+            <a
+              href="#sekcja-main"
+              class="flex items-center gap-4 px-[2vw] py-2 sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold rounded-lg transition-all duration-300 ease-in-out hover:scale-[1.03] hover:bg-[var(--color-hover-bg)] active:bg-[var(--color-hover-bg)]"
+            >
+              <img
+                src="../grafiki/icons8-homepage-48.png"
+                alt="home_page_icon"
+                class="w-3/10"
+              />
+              <p>Main</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#sekcja-projekty"
+              class="flex items-center gap-4 px-[2vw] py-2 sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold rounded-lg transition-all duration-300 ease-in-out hover:scale-[1.03] hover:bg-[var(--color-hover-bg)] active:bg-[var(--color-hover-bg)]"
+            >
+              <img
+                src="../grafiki/icons8-it-48.png"
+                alt="projects_page_icon"
+                class="w-3/10"
+              />
+              <p>Projekty</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#sekcja-o-mnie"
+              class="flex items-center gap-4 px-[2vw] py-2 sm:text-lg md:text-xl lg:text-2xl xl:text-3xl whitespace-nowrap font-bold rounded-lg hover:scale-[1.03] hover:bg-[var(--color-hover-bg)] active:bg-[var(--color-hover-bg)]"
+            >
+              <img
+                src="../grafiki/icons8-customer-48.png"
+                alt="about_page_icon"
+                class="w-3/10"
+              />
+              <p>O mnie</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <br />
+      <button
+        id="przelacz_motyw"
+        aria-label="Przełącz tryb ciemny"
+        class="w-[11vw] h-[4.5vh] p-2 rounded-xl drop-shadow-lg text-[2vh] whitespace-nowrap"
+      >
+        🌙 Dark Mode
+      </button>
+      <nav
+        id="linki"
+        class="w-7/9 absolute bottom-0 left-0 w-full text-center pb-2"
+      >
+        <ul class="list-none p-0 m-0 gap-y-0 flex flex-col items-center w-full">
+          <li
+            class="font-bold mb-2 sm:text-sm md:text-md lg:text-lg xl:text-xl w-4/5 text-center"
+          >
+            <p>Pomniejsze projekty</p>
+          </li>
+          <li class="w-full flex justify-center">
+            <a
+              href="https://github.com/awitkowsky/react-far-away"
+              target="_blank"
+              class="block w-4/5 sm:text-xs md:text-sm lg:text-md xl:text-lg text-center hover:bg-[var(--color-hover-bg)] hover:scale-107"
+              >Far Away <i><b>(React)</b></i></a
+            >
+          </li>
+          <li class="w-full flex justify-center">
+            <a
+              href="https://github.com/awitkowsky/react-steps-component"
+              target="_blank"
+              class="block w-4/5 sm:text-xs md:text-sm lg:text-md xl:text-lg text-center rounded-lg hover:bg-[var(--color-hover-bg)] hover:scale-107"
+              >stepsy <i><b>(React)</b></i></a
+            >
+          </li>
+          <li class="w-full flex justify-center">
+            <a
+              href="https://github.com/awitkowsky/react-pizza-menu"
+              target="_blank"
+              class="block w-4/5 sm:text-xs md:text-sm lg:text-md xl:text-lg text-center rounded-lg hover:bg-[var(--color-hover-bg)] hover:scale-107"
+              >Pizza menu <i><b>(React)</b></i></a
+            >
+          </li>
+          <li class="w-full flex justify-center">
+            <a
+              href="projekty/paswd_check.html"
+              class="block w-4/5 sm:text-xs md:text-sm lg:text-md xl:text-lg text-center rounded-lg hover:bg-[var(--color-hover-bg)] hover:scale-107"
+              >Moc hasła <i><b>(JS)</b></i></a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
-    
+
     <main class="ml-[20vw] w-[80vw] h-[100vh] overflow-y-auto">
-        <section id="sekcja-main" class="relative flex flex-col items-center justify-center h-screen w-full text-4xl font-semibold tracking-wide">
-            <h1 class="drop-shadow-lg tracking-tight">Hej, jestem Antek.</h1>
-            <h1 class="drop-shadow-lg tracking-tight">Tworzę strony i aplikacje webowe.</h1>
-            <p class="text-xl font-normal pt-3 italic drop-shadow-lg">Dodatkowo jestem uczniem i cały czas się uczę 😉</p>
-        
-            <div class="absolute bottom-0 left-0 w-full overflow-hidden">
-                <svg viewBox="0 0 2880 150" xmlns="http://www.w3.org/2000/svg" class="w-[200%] animate-wave absolute">
-                    <path fill="var(--color-wave)" d="M1440,120 Q1260,30 1080,90 T720,120 T360,60 T0,120 L0,150 L1440,150Z"></path>
-                    <path fill="var(--color-wave)" d="M2880,120 Q2700,30 2520,90 T2160,120 T1800,60 T1440,120 L1440,150 L2880,150Z"></path>
-                  </svg>
-                  <svg viewBox="0 0 2880 150" xmlns="http://www.w3.org/2000/svg" class="w-[200%] animate-wave-copy">
-                    <path fill="var(--color-wave)" d="M1440,120 Q1260,30 1080,90 T720,120 T360,60 T0,120 L0,150 L1440,150Z"></path>
-                    <path fill="var(--color-wave)" d="M2880,120 Q2700,30 2520,90 T2160,120 T1800,60 T1440,120 L1440,150 L2880,150Z"></path>
-                  </svg>
-            </div>
-        </section>
-        
-        <section id="sekcja-projekty" class="flex flex-col items-center justify-center h-auto w-full pt-10 pb-20 gap-10 relative">
-            <div class="flex flex-row gap-40 items-center justify-center w-full">
-            <div class="karta_projektu w-6/16 h-180 flex flex-col items-center justify-center gap-5 p-7 relative rounded-3xl drop-shadow-2xl">
-                <div class="flex flex-row items-center absolute top-3 right-3">
-                    <p class="text-2xl">1</p>
-                    <img src="../grafiki/icons8-person-64.png" alt="person_icon" class="w-9">
-                </div>
-                <img src="../grafiki/adoptails-logo.png" alt="AdopTails_logo" class="w-9/10 object-contain ">
-                <h3 class="text-3xl font-semibold mt-auto">AdopTails</h3>
-                <p class="text-lg text-center">
-                    Aplikacja internetowa służąca do adopcji zwierząt. Ma na celu wsparcie schronisk o platformę do zarządzania zwierzętami
-                    do adopcji oraz samymi adopcjami. Projekt ma jedynie chrakter charytatywny. Dodatkowo została stworzona aplikacja PWA.
-                </p>
-                <p class="text-lg text-center"><strong>Technologie:</strong> HTML, CSS, PHP, SQL, phpMyAdmin</p>
-                <a href="https://adoptails.maventplan.pl/" target=”_blank” class="rounded-xl w-3/5 text-white text-center h-10 p-2 bg-amber-600 drop-shadow-lg">Zobacz projekt</a>
-            </div>
+      <section
+        id="sekcja-main"
+        class="relative flex flex-col items-center justify-center h-screen w-full text-4xl font-semibold tracking-wide"
+      >
+        <h1 class="drop-shadow-lg tracking-tight">Hej, jestem Antek.</h1>
+        <h1 class="drop-shadow-lg tracking-tight">
+          Tworzę strony i aplikacje webowe.
+        </h1>
+        <p class="text-xl font-normal pt-3 italic drop-shadow-lg">
+          Dodatkowo jestem uczniem i cały czas się uczę 😉
+        </p>
 
-            <div class="karta_projektu w-6/16 h-180 flex flex-col items-center justify-center gap-5 p-7 relative rounded-3xl drop-shadow-2xl">
-                <div class="flex flex-row items-center absolute top-3 right-3">
-                    <p class="text-2xl">3</p>
-                    <img src="../grafiki/icons8-person-64.png" alt="person_icon" class="w-9">
-                </div>
-                <p class="freni_work text-3xl tracking-wide absolute top-7 justify-self-center">Work in progres...</p>
-                <h3 class="text-3xl font-semibold mt-auto">Fréni</h3>
-                <p class="text-lg text-center">
-                    System do zarządzania projektami, zorientowany na użytkownika, z możliwością dostosowywania do potrzeb użytkownika.
-                    Zakładane możliwości: projekty „prywatne" i „publiczne", zarządzanie użytkownikami poprzez role, główne działanie
-                    systemu oparte możliwie na systemie „przeciągnij i upuść".
-                </p>
-                <p class="text-lg text-center"><strong>Technologie:</strong> HTML, CSS, JavaScript, Cypher, Neo4j</p>
-                <a href="#" class="rounded-xl w-3/5 text-white text-center h-10 p-2 bg-amber-600 drop-shadow-lg">Zobacz projekt</a>
-            </div>
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden">
+          <svg
+            viewBox="0 0 2880 150"
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-[200%] animate-wave absolute"
+          >
+            <path
+              fill="var(--color-wave)"
+              d="M1440,120 Q1260,30 1080,90 T720,120 T360,60 T0,120 L0,150 L1440,150Z"
+            ></path>
+            <path
+              fill="var(--color-wave)"
+              d="M2880,120 Q2700,30 2520,90 T2160,120 T1800,60 T1440,120 L1440,150 L2880,150Z"
+            ></path>
+          </svg>
+          <svg
+            viewBox="0 0 2880 150"
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-[200%] animate-wave-copy"
+          >
+            <path
+              fill="var(--color-wave)"
+              d="M1440,120 Q1260,30 1080,90 T720,120 T360,60 T0,120 L0,150 L1440,150Z"
+            ></path>
+            <path
+              fill="var(--color-wave)"
+              d="M2880,120 Q2700,30 2520,90 T2160,120 T1800,60 T1440,120 L1440,150 L2880,150Z"
+            ></path>
+          </svg>
         </div>
-        </section>        
-    
-        <section id="sekcja-o-mnie" class=" flex flex-col items-center justify-center h-190 w-full font-semibold tracking-wide p-4 pt-20">
+      </section>
 
-            <div class="absolute top-0 left-0 w-full overflow-hidden z-10">
-                <svg viewBox="0 0 2880 150" xmlns="http://www.w3.org/2000/svg" class="w-[200%] animate-wave absolute transform rotate-180">
-                  <path fill="var(--color-wave)" d="M1440,120 Q1260,30 1080,90 T720,120 T360,60 T0,120 L0,150 L1440,150Z"></path>
-                  <path fill="var(--color-wave)" d="M2880,120 Q2700,30 2520,90 T2160,120 T1800,60 T1440,120 L1440,150 L2880,150Z"></path>
-                </svg>
-                <svg viewBox="0 0 2880 150" xmlns="http://www.w3.org/2000/svg" class="w-[200%] animate-wave-copy transform rotate-180">
-                  <path fill="var(--color-wave)" d="M1440,120 Q1260,30 1080,90 T720,120 T360,60 T0,120 L0,150 L1440,150Z"></path>
-                  <path fill="var(--color-wave)" d="M2880,120 Q2700,30 2520,90 T2160,120 T1800,60 T1440,120 L1440,150 L2880,150Z"></path>
-                </svg>
+      <section
+        id="sekcja-projekty"
+        class="flex flex-col items-center justify-center h-auto w-full pt-10 pb-20 gap-10 relative"
+      >
+        <div class="flex flex-row gap-40 items-center justify-center w-full">
+          <div
+            class="karta_projektu w-6/16 h-180 flex flex-col items-center justify-center gap-5 p-7 relative rounded-3xl drop-shadow-2xl"
+          >
+            <div class="flex flex-row items-center absolute top-3 right-3">
+              <p class="text-2xl">1</p>
+              <img
+                src="../grafiki/icons8-person-64.png"
+                alt="person_icon"
+                class="w-9"
+              />
             </div>
-              
+            <img
+              src="../grafiki/adoptails-logo.png"
+              alt="AdopTails_logo"
+              class="w-9/10 object-contain"
+            />
+            <h3 class="text-3xl font-semibold mt-auto">AdopTails</h3>
+            <p class="text-lg text-center">
+              Aplikacja internetowa służąca do adopcji zwierząt. Ma na celu
+              wsparcie schronisk o platformę do zarządzania zwierzętami do
+              adopcji oraz samymi adopcjami. Projekt ma jedynie chrakter
+              charytatywny. Dodatkowo została stworzona aplikacja PWA.
+            </p>
+            <p class="text-lg text-center">
+              <b>Technologie:</b> HTML, CSS, PHP, SQL, phpMyAdmin
+            </p>
+            <a
+              href="https://adoptails.maventplan.pl/"
+              target="”_blank”"
+              class="rounded-xl w-3/5 text-white text-center h-10 p-2 bg-amber-600 drop-shadow-lg"
+              >Zobacz projekt</a
+            >
+          </div>
 
-            <h2 class="tytul text-5xl font-semibold drop-shadow-lg relative text-center after:content-[''] after:block after:w-50 after:h-1 after:bg-amber-500 after:mx-auto after:mt-2 mb-6">O mnie</h2>
-            <div class="max-w-3xl text-lg leading-relaxed space-y-4">
-                <p>Cześć! Jestem Antek – na co dzień zajmuję się <strong>analizą bezpieczeństwa i testami penetracyjnymi</strong>, a web development to moje hobby, które często łączy się z pentestingiem.</p>
-                <p>Najbardziej lubię pracę z <strong>frontendem</strong>, szczególnie <strong>HTML, CSS, JavaScript</strong> (korzystam m.in. z <strong>Tailwind CSS</strong>). Mam też doświadczenie z <strong>SCSS, PHP i SQL</strong>, więc full-stack nie jest mi obcy.</p>
-                <p>Lubię uczyć się nowych technologii i dobrze odnajduję się zarówno w pracy solo, jak i zespołowej. Jeśli masz pytania lub propozycję współpracy – <strong>zapraszam do kontaktu!</strong> 📩</p>
+          <div
+            class="karta_projektu w-6/16 h-180 flex flex-col items-center justify-center gap-5 p-7 relative rounded-3xl drop-shadow-2xl"
+          >
+            <div class="flex flex-row items-center absolute top-3 right-3">
+              <p class="text-2xl">3</p>
+              <img
+                src="../grafiki/icons8-person-64.png"
+                alt="person_icon"
+                class="w-9"
+              />
             </div>
-        </section>
+            <p
+              class="freni_work text-3xl tracking-wide absolute top-7 justify-self-center"
+            >
+              Work in progres...
+            </p>
+            <h3 class="text-3xl font-semibold mt-auto">Fréni</h3>
+            <p class="text-lg text-center">
+              System do zarządzania projektami, zorientowany na użytkownika, z
+              możliwością dostosowywania do potrzeb użytkownika. Zakładane
+              możliwości: projekty „prywatne" i „publiczne", zarządzanie
+              użytkownikami poprzez role, główne działanie systemu oparte
+              możliwie na systemie „przeciągnij i upuść".
+            </p>
+            <p class="text-lg text-center">
+              <b>Technologie:</b> HTML, CSS, JavaScript, Cypher, Neo4j
+            </p>
+            <a
+              href="#"
+              class="rounded-xl w-3/5 text-white text-center h-10 p-2 bg-amber-600 drop-shadow-lg"
+              >Zobacz projekt</a
+            >
+          </div>
+        </div>
+      </section>
 
-        <footer class="flex flex-row gap-1 items-center justify-center" aria-label="Stopka">
-            <p class="italic text-md">Napisane z uczuciem przez </p>
-            <p class="font-bold text-base">&copy;Awitkowsky</p>
-        </footer>
+      <section
+        id="sekcja-o-mnie"
+        class="flex flex-col items-center justify-center h-190 w-full font-semibold tracking-wide p-4 pt-20"
+      >
+        <div class="absolute top-0 left-0 w-full overflow-hidden z-10">
+          <svg
+            viewBox="0 0 2880 150"
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-[200%] animate-wave absolute transform rotate-180"
+          >
+            <path
+              fill="var(--color-wave)"
+              d="M1440,120 Q1260,30 1080,90 T720,120 T360,60 T0,120 L0,150 L1440,150Z"
+            ></path>
+            <path
+              fill="var(--color-wave)"
+              d="M2880,120 Q2700,30 2520,90 T2160,120 T1800,60 T1440,120 L1440,150 L2880,150Z"
+            ></path>
+          </svg>
+          <svg
+            viewBox="0 0 2880 150"
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-[200%] animate-wave-copy transform rotate-180"
+          >
+            <path
+              fill="var(--color-wave)"
+              d="M1440,120 Q1260,30 1080,90 T720,120 T360,60 T0,120 L0,150 L1440,150Z"
+            ></path>
+            <path
+              fill="var(--color-wave)"
+              d="M2880,120 Q2700,30 2520,90 T2160,120 T1800,60 T1440,120 L1440,150 L2880,150Z"
+            ></path>
+          </svg>
+        </div>
+
+        <h2
+          class="tytul text-5xl font-semibold drop-shadow-lg relative text-center after:content-[''] after:block after:w-50 after:h-1 after:bg-amber-500 after:mx-auto after:mt-2 mb-6"
+        >
+          O mnie
+        </h2>
+        <div class="max-w-3xl text-lg leading-relaxed space-y-4">
+          <p>
+            Cześć! Nazywam się Antek. Na co dzień pracuję w obszarze
+            <b>bezpieczeństwa IT i testów penetracyjnych</b>, ale moją drugą
+            pasją jest <b>web development</b> – dziedzina, którą rozwijam
+            równolegle i chętnie łączę z tematyką bezpieczeństwa.
+          </p>
+          <p>
+            Od kilku miesięcy intensywnie rozwijam swoje umiejętności w
+            frontendzie – czuję, że szybko łapię temat i sprawia mi to ogromną
+            frajdę. Pracuję głównie z
+            <b>HTML, CSS, JavaScript</b> i <b>Reactem</b>. Na co dzień korzystam
+            z <b>Tailwind CSS</b>, mam też doświadczenie z
+            <b>SCSS, PHP i SQL</b>, więc backend również nie jest mi obcy.
+          </p>
+          <p>
+            Uczę się systematycznie i z zaangażowaniem – moim celem jest rozwój
+            w kierunku
+            <b>profesjonalnego full-stack developera</b>. Dobrze odnajduję się
+            zarówno w pracy indywidualnej, jak i zespołowej. Jeśli masz pytania
+            lub propozycję współpracy – <b>zapraszam do kontaktu!</b> 📩
+          </p>
+        </div>
+      </section>
+
+      <footer
+        class="flex flex-row gap-1 items-center justify-center"
+        aria-label="Stopka"
+      >
+        <p class="italic text-md">Napisane z uczuciem przez</p>
+        <p class="font-bold text-base">&copy;Awitkowsky</p>
+      </footer>
     </main>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
